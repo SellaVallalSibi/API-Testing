@@ -21,7 +21,7 @@ public class BugTest {
 		
 		
 		given().header("X-Atlassian-Token","no-check").pathParam("key", IssueId)
-		.header("Authorization" , pass()).multiPart("file",new File("C:\\Users\\004PEB744\\Pictures\\Screenshots\\Screenshot 2024-01-04 133149.png"))
+		.header("Authorization" , pass()).multiPart("file",new File("<image path>"))
 		.when().post("rest/api/3/issue/{key}/attachments")
 		.then().assertThat().statusCode(200);
 	}
@@ -42,12 +42,8 @@ public class BugTest {
 	}
 	
 	public static String pass() {
-		return "Basic c2V2YXNpNWM2QGdtYWlsLmNvbTpBVEFUVDN4RmZHRj"
-				+ "BFT0RkdGZCQmdua0tHaVlxWmFaUVVnanB5YnpiRmFxSkNH"
-				+ "RU5SUlBRXy00WkNkZEpQQUg0UE9PYmdadW02U3o1anViUGw"
-				+ "2YlB5cUhSZFRXY3dTS21Lb1VkTUNCUFgwSXlPTzRESkRIcWJr"
-				+ "SHhabm5neU0yQk44MnpsLWNpcVdxNE1xS3ExUER6QWZ2YjVNSHY"
-				+ "yUmFFek10TFozbVdiX0JSbmNSLTdEck1qeTg9QjRBMzUwNzE=";
+		return "Basic <API TOKEN>";
 	}
 
 }
+
